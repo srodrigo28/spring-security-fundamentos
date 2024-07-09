@@ -5,8 +5,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
+@Data
 @RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor

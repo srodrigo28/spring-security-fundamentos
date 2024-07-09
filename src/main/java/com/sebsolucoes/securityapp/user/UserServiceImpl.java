@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements UserService {
+    
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
@@ -17,6 +18,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User create(User user) {
             User existUser = userRepository.findByUsername(user.getUsername());
+            
             if(existUser != null){
                 throw new Error("User already exists");
             }
