@@ -12,7 +12,6 @@ import org.hibernate.annotations.ManyToAny;
 
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -31,10 +30,10 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true, nullable = false)
+    // @Column(unique = true, nullable = false)
     private String username;
 
-    @Column(nullable = false, length = 6)
+    // @Column(nullable = false, length = 6)
     private String password;
 
     @ManyToAny

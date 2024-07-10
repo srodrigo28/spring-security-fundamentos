@@ -18,10 +18,10 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 public class WebSecurityConfig {
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf( csrf -> csrf.disable() )
-            .authorizeHttpRequests( (request) -> request
-            .requestMatchers(HttpMethod.POST, "/user/**").permitAll()
+            .authorizeHttpRequests( (requests) -> requests
+            .requestMatchers(HttpMethod.POST, "/role/**").permitAll()
             .anyRequest()
             .authenticated()
         );
